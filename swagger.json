@@ -1,0 +1,296 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "coderBora-NodeJS-CRUD-MongoDB",
+    "description": "A minimal and easy to follow example of what you need to create a CRUD style API in NodeJs",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "components": {
+    "securitySchemes": {
+        "bearerAuth": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "JWT"
+        }
+    }
+  }, 
+  "paths": {
+    "/user/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Create a new user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/user/signup": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Create a new user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/user/{userId}": {
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Delete a user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "params",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/orders/": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "Create a new user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "Create a new user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/order/{orderId}": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "Create a new user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "Create a new user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/orders/{orderId}": {
+      "delete": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "Delete a user in system",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "params",
+            "description": "person detail",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
