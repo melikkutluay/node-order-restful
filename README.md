@@ -69,7 +69,7 @@ We have two options for the documantation, the links are in the icons below, you
 
 ### Postman: 
 [![N|Solid](https://www.svgrepo.com/show/306590/postman.svg)](https://documenter.getpostman.com/view/14336225/2s8YzUwLjA) 
-> Link for Postman: `ttps://documenter.getpostman.com/view/14336225/2s8YzUwLjA`
+> Link for Postman: `https://documenter.getpostman.com/view/14336225/2s8YzUwLjA`
 ### Swagger_UI:
 [![N|Solid](https://www.svgrepo.com/show/374111/swagger.svg)](http://localhost:3000/api-docs/) 
 > Link for Swagger-Ui: `http://localhost:3000/api-docs`
