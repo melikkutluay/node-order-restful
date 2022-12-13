@@ -25,16 +25,10 @@ app.use((req, res, next) => {
   }
   next();
 });
-
-// Routes which should handle requests
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
 app.use("/user", userRoutes);
-const students = ["Elie", "Matt", "Joel", "Michael"];
 
-app.get("/", (req, res) => {
-  return res.json(students);
-});
 var options = {explorer: true};
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 app.use((req, res, next) => {

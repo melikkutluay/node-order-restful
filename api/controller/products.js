@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Product = require('../models/product')
-const queue = require('../middleware/queue')
 exports.product_get_all = (req, res, next) => {
     Product.find()
       .select("name price _id")
