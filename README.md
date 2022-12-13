@@ -38,7 +38,7 @@ Indicate where to use it in your own application is linked below.
 | swagger-ui-express| restful api documentation|
 
 ## requirements
-| Requires |
+| Requirments |
 | -------|
 | NodeJs|
 | Docker |
