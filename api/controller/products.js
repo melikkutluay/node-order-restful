@@ -88,35 +88,28 @@ exports.product_get_Id = (req, res, next) => {
         res.status(500).json({ error: err });
       });
   }
-exports.product_update = (req, res, next) => {
-    const id = req.params.productId;
-    const updateOps = {};
-    for (const ops of req.body) {
-      updateOps[ops.propName] = ops.value;
-    }
-    if (condition) {
-      Product.update({ _id: id }, { $set: updateOps })
-      .exec()
-      .then(result => {
-        res.status(200).json({
-            message: 'Product updated',
-            request: {
-                type: 'GET',
-                url: 'http://localhost:3000/products/' + id
-            }
-        });
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json({
-          error: err
-        });
+exports.product_update =(req, res, next) => {
+  const id = req.params.productId;
+  const updateOps = {};
+  
+  Product.update({ _id: id }, { $set: req.body })
+    .exec()
+    .then(result => {
+      res.status(200).json({
+        message: "Product updated",
+        request: {
+          type: "GET",
+          url: "http://localhost:3000/products/" + id
+        }
       });
-    } else {
-      throw new Error("you are not authorized")
-    }
-    
-  }
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({
+        error: err
+      });
+    });
+  };
 exports.product_delete = (req, res, next) => {
     const id = req.params.productId;
     if (req.userData.role == "Admin") {
