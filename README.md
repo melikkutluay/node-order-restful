@@ -21,7 +21,12 @@ cd node-order-restful
 npm i
 npm run dev
 ```
-
+Run Unit test
+```sh
+cd node-order-restful
+npm i
+npm run test
+```
 ## Plugins
 
 node-order-restful is currently extended with the following plugins.
