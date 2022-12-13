@@ -38,9 +38,11 @@ Indicate where to use it in your own application is linked below.
 | swagger-ui-express| restful api documentation|
 
 ## requirements
-NodeJs
-Docker
-docker-compose
+| Requires |
+| -------|
+| NodeJs|
+| Docker |
+| docker-compose|
 
 ## Docker
 
